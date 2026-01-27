@@ -62,8 +62,59 @@ class MyAbstractClass(ABC):
     @staticmethod
     def static_method_example():
         return "This is a static method example"
+    
+    #abstract methods have no body: they need to be defined in their child class
+    @abstractmethod
+    def abstract_method(self):
+        pass
 
 
 print(MyAbstractClass.class_count)
 print(MyAbstractClass.print_class_count())
-MyAbstractClass.static_method_example()
+print(MyAbstractClass.static_method_example())
+
+class MyInheritsTheAbstractClass(MyAbstractClass):
+    def __init__(self):
+        print("I inherited from the abstract class")
+        MyAbstractClass.class_count +=1
+
+    #you can now define what the abstract method does within the child class
+    def abstract_method(self):
+        return "This is the implementation of the abstract method"
+
+class AlsoInheritsAbstractClass(MyAbstractClass):
+    def __init__(self):
+        print("I also inherited from the abstract class")
+        MyAbstractClass.class_count +=1
+
+    def abstract_method(self):
+        return "This is another implementation of the abstract method"
+    
+my_abstract_instance = MyInheritsTheAbstractClass()
+print(my_abstract_instance.print_class_count())
+another_abstract_instance = AlsoInheritsAbstractClass()
+print(another_abstract_instance.print_class_count())
+
+print(my_abstract_instance.abstract_method())
+print(another_abstract_instance.abstract_method())
+
+class OuterClass:
+    def __init__(self, number, word, inner_class="my inner class"):
+        self.number = number
+        self.word = word
+        self.create_inner_class(inner_class)
+
+    class InnerClass:
+        def __init__(self, name):
+            self.name = name
+            print("the inner class has been created")
+        
+    def create_inner_class(self, name):
+        self.inner_class = self.InnerClass(name)
+
+    def __str__(self):
+        return f"my number is {self.number}, my word is {self.word}, and my inner class name is {self.inner_class.name}"
+    
+
+outer_instance = OuterClass(10, "hello", "inner instance")
+print(outer_instance)
