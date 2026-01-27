@@ -318,3 +318,6 @@ print(my_dictionary.items()) # returns a view object that displays a list of a d
 print(my_dictionary.setdefault("key", "default value"))  # returns "value"
 print(my_dictionary.setdefault("nonexistent", "default value"))  # returns "default value" and adds the key-value pair to the dictionary
 print(my_dictionary)
+
+print(my_dictionary.setdefault("can also do this", "default value"))  # returns a view object that displays a list of all the keys in the dictionary
+print(my_dictionary)
