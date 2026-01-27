@@ -213,3 +213,63 @@ index_of_two = appended_list.index(2)
 
 #list.count(value) returns the number of occurrences of the value
 print(appended_list.count(7))
+
+print("sorting example")
+to_sort_numbers= [5,3,8,1,2,7,4,6]
+print(to_sort_numbers)
+to_sort_numbers.sort()  # sorts the list in place
+print(to_sort_numbers)
+
+sort_using_key=[(1,"c"), (2,"a"), (3,"b")]
+def my_key(element):
+    return element[1] #takes the second element of the tuple for sorting
+
+sort_using_key.sort(key=my_key)
+print(sort_using_key)
+
+print(to_sort_numbers[::-1])  # prints the list in reverse order without modifying the original list
+print(to_sort_numbers)  # original list remains unchanged
+
+print("using reverse method")
+
+to_sort_numbers.reverse()  # reverses the list in place
+print(to_sort_numbers)
+
+###Sets 
+
+well:str = "well"
+lets = "let's"
+see= "see"
+
+my_set={1}
+my_set.add(2)
+my_set.add(lets)
+my_set.add(well)
+my_set.add(see)
+print(my_set)
+
+my_set.add(2)  # adding a duplicate does nothing
+print(my_set)
+
+new_list=[1,6,5,4,2,0,1,7,8,3,2,9,1]
+y:list = list(set(new_list))
+print(y)
+
+#set.pop() removes and returns an arbitrary element from the set. Raises KeyError if the set is empty
+popped_element = my_set.pop()
+print(f"popped element: {popped_element}")
+popped_element2 = my_set.pop()
+print(f"popped element: {popped_element2}")
+print(my_set)
+
+#set.remove(value) removes the specified value from the set. Raises KeyError if the value is not found
+#set.discard(value) removes the specified value from the set. Does nothing if the value is not found
+my_set.remove(well)
+print(my_set)
+my_set.discard("nonexistent")  # does nothing
+
+#set.update(other_set) adds all elements from other_set to the set
+another_set={3,4,5}
+my_set.update(another_set)
+print(my_set)
+
