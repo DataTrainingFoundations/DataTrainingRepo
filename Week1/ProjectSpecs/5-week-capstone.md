@@ -71,7 +71,7 @@ Using Pandas and Matplotlib (as well as NumPy, Seaborn and any other packages or
 - Atleast one correlation found in your data.
 - Atleast 3 meaningful visualizations to convey some information derived from the data.
 - Powerpoint slide deck that introduces your data set, presents your conclusions/findings, and contains your graphs/visualizations.
-- Professionally presented on the final day
+- Professionally presented on the final day with each group member participating and having a role in the presentation.
 
 
 ## Presentation
