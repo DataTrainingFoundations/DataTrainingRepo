@@ -1,4 +1,4 @@
-from interface import Calculator
+from calculator_fun.calc_abstract import Calculator
 
 class CalculatorImp(Calculator):
     def add(self, a:float, b:float )-> float:
