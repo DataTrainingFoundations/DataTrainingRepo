@@ -10,4 +10,15 @@ data_set = {"1":"some data"}
 def hello_world():
     return "Hello World"
 
+#get request with path parameter
+@app.route("/greeting/<name>",methods=["GET"])
+def greeting(name:str):
+    return f"Hello {name}"
+
+@app.route("/<num1>/add/<num2>", methods = ["GET"])
+def addition(num1:str, num2:str):
+    result = int(num1) + int(num2)
+    return str(result)
+
+
 app.run()
