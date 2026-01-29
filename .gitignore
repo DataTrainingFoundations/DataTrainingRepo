@@ -3,3 +3,4 @@ textFileToIgnore.txt
 
 **/build/
 **/venv/
+**/__pycache__/
