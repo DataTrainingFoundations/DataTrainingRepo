@@ -20,5 +20,14 @@ def addition(num1:str, num2:str):
     result = int(num1) + int(num2)
     return str(result)
 
+@app.route("/login", methods=["POST"])
+def login():
+    credentials = request.get_json() #sets out variable to the JSON dictionary values
+    username = credentials["username"]
+    password = credentials["password"]
+    if username == "good" and password == "correct":
+        return "your credentials are good"
+    else:
+        return "your credentials are bad!"
 
 app.run()
