@@ -4,7 +4,7 @@ app: Flask = Flask(__name__) #this tells flask where to look for resources (name
 
 count = 0 
 
-data_set = {"1":"some data"}
+data_set = {"1":"some data","two":"more data"}
 
 @app.route("/", methods = ["GET"])
 def hello_world():
@@ -35,6 +35,14 @@ def add_count():
     global count
     count +=1
     return f"The count is now {count}"
+
+@app.get("/data") # route will look like this: http://domain:port/data?query_param=value
+def query_database():
+    query = request.args["DB"]
+    if query == "":
+        return data_set
+    else:
+        return data_set[query]
 
 
 app.run()
