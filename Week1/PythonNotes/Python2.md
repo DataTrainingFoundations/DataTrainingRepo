@@ -236,7 +236,7 @@ When you are aggregating or otherwise grouping time series data, it will occasio
 dt.replace(minute=0, second=0)
 #datetime.datetime(2022, 1, 27, 20, 0)
 ```
-Since `datetime.datetime` is an immutable type, methods like these always produce new objects. The difference of two datetime objects produces a datetime.timedelta type:
+Since `datetime` is an immutable type, methods like these always produce new objects. The difference of two datetime objects produces a datetime.timedelta type:
 ```Python
 dt2 = datetime(2022, 2, 15, 22, 30)
 delta = dt2 - dt
