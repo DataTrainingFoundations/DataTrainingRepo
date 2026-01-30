@@ -390,7 +390,7 @@ else:
 This is a more concrete example:
 ```Python
 x = 5
-'Non-negative' if x >= 0 else 'Negative'
+result = 'Non-negative' if x >= 0 else 'Negative'
 ```
 As with `if-else` blocks, only one of the expressions will be executed. Thus, the `if` and `else` sides of the ternary expression could contain costly computations, but only the true branch is ever evaluated. While it may be tempting to always use ternary expressions to condense your code, realize that you may sacrifice readability if the condition as well as the
 true and false expressions are very complex.
