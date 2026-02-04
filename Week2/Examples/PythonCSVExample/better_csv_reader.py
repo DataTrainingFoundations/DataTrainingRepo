@@ -17,3 +17,19 @@ print("still works")
 print(rows)
 file.close()
 
+# #let's try writing a csv
+# file = open('airport_codes2.csv','w')
+# csv_writer = csv.writer(file)
+# rows_no_header= rows[1:]
+# for row in rows_no_header:
+#     csv_writer.writerow(row)
+# file.close()
+
+#we could write all the rows at once
+file = open('airport_codes2.csv','w')
+csv_writer = csv.writer(file)
+rows_no_header= rows[1:]
+csv_writer.writerows(rows_no_header)
+file.close()
+
+
