@@ -565,7 +565,7 @@ def short_function(x):
     return x * 2
 equiv_anon = lambda x: x * 2
 ```
-I usually refer to these as lambda functions in the rest of the book. They are especially convenient in data analysis because, as you’ll see, there are many cases where data transformation functions will take functions as arguments. It’s often less typing (and clearer) to pass a lambda function as opposed to writing a full-out function declaration or even assigning the lambda function to a local variable. For example, consider this silly example:
+These are lambda functions. They are especially convenient in data analysis because, as you’ll see, there are many cases where data transformation functions will take functions as arguments. It’s often less typing (and clearer) to pass a lambda function as opposed to writing a full-out function declaration or even assigning the lambda function to a local variable. For example, consider this silly example:
 ```Python
 def apply_to_list(some_list, f):
     return [f(x) for x in some_list]
