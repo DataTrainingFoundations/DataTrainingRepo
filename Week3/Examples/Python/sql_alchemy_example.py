@@ -88,13 +88,5 @@ try:
 except SQLAlchemyError as e:
     print("Database error:", e)
 
-    
-    
-
-
-
 
 #allow user to to add a player
-# could do something like this: basketball'); DROP TABLE players; --
-# but now above just inserts above as a string rather than an injection attack deleting table
-# 
