@@ -245,6 +245,81 @@ SELECT City FROM Customers UNION SELECT City FROM Suppliers ORDER BY City;
 -- UNION ALL permits duplicates
 SELECT City FROM Customers UNION ALL SELECT City FROM Suppliers ORDER BY City;
 
+SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country;
+SELECT COUNT(CustomerID) AS cnt, Country FROM Customers AS c GROUP BY Country HAVING cnt >1 ;
+
+SELECT * FROM Products;
+SELECT * FROM Suppliers;
+
+-- works with cross join but not the most efficient here
+SELECT ProductName FROM Products, Suppliers WHERE Products.SupplierID=Suppliers.supplierID AND Price<20;
+
+-- use inner join instead
+SELECT p.ProductName FROM Products p JOIN Suppliers s 
+ON p.SupplierID = s.SupplierID
+WHERE price<20;
+
+-- cross join
+SELECT * FROM Products, Suppliers;
+
+SELECT OrderID, Quantity,
+CASE 
+	WHEN Quantity > 5 THEN 'The quantity is greater than 5'
+    WHEN Quantity = 5 THEN 'The quantity is 5'
+    ELSE 'The quantity is under 5'
+END AS QuantityText
+FROM OrderDetails;
+
+-- stored procedures 
+
+Delimiter //
+DROP PROCEDURE IF EXISTS GetCustomersByCountry ;
+CREATE PROCEDURE GetCustomersByCountry(IN countryName VARCHAR(50))
+BEGIN
+	-- SELECT customers from a specific country
+	SELECT CustomerID, CustomerName, Country, City
+    FROM Customers
+    WHERE Country = CountryName
+    ORDER BY CustomerName;
+    
+    -- lets also return the total count of customers from that country
+    SELECT COUNT(*) AS TotalCustomers
+    FROM Customers
+    WHERE Country = countryName;
+      
+END //
+Delimiter ;
+
+CALL GetCustomersByCountry('Germany');
+
+DROP TABLE IF EXISTS Employee;
+CREATE TABLE Employee(
+`Name` varchar(255), 
+Age int , 
+Department varchar(255), 
+Salary float);
+
+SELECT * FROM Employee;
+INSERT INTO Employee Values ("Jon",20,"Sales",40000),("James",25,"Sales",20000),("Jake",35,"Delivery",30000),("Luke",40,"Delivery",1000000);
+
+-- example of a window function
+SELECT `Name`, Age, Department, Salary, AVG(SALARY) OVER(PARTITION BY Department) AS Avg_Salary FROM Employee;
+
+-- could do it with self join instead:
+SELECT e1.`Name`, e1.Age, e1.Department, e1.Salary, AVG(e2.SALARY) AS Avg_Salary 
+FROM employee e1
+JOIN employee e2
+ON e1.Department = e2.department
+GROUP BY e1.Name,e1.Department, e1.Age, e1.Salary;
+
+
+-- recall the orders and persons table
+SELECT * FROM Persons;
+SELECT * FROM Orders;
+
+
+
+
 
 
 
