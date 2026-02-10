@@ -125,6 +125,147 @@ SELECT * FROM Customers WHERE Country = "Germany" AND City = "Berlin";
 
 SELECT * FROM Customers WHERE City = "Berlin" OR City = "Frankfurt";
 
+SELECT * FROM Customers WHERE NOT Country = "UK" AND NOT Country = "sweden" ORDER BY Country, CustomerName LIMIT 3;
+
+
+
+-- -----------------------------------------------------------
+CREATE TABLE OrderDetails(
+	OrderDetailID int NOT NULL,
+	OrderID int,
+	ProductID int,
+	Quantity int,
+	PRIMARY KEY(OrderDetailID)
+);
+
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (1,10248,11,12);
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (2,10248,42,10);
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (3,10248,72,5);
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (4,10249,72,5);
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (5,10249,72,5);
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (6,10250,72,5);
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (7,10250,72,5);
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (8,10250,72,5);
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (9,10251,72,5);
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID,ProductID, Quantity)
+VALUES (10,10251,72,5);
+---------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS Products;
+CREATE TABLE Products(
+	ProductID int NOT NULL,
+	ProductName varchar(255),
+	SupplierID int,
+	CategoryID int,
+	Unit varchar(255),
+	Price float,
+	Primary Key(ProductID)
+);
+INSERT INTO Products(ProductID, ProductName, SupplierID, CategoryID, Unit, Price)
+VALUES (1,'Chais',1,1,'10 boxes x 20 bags',18);
+
+INSERT INTO Products(ProductID, ProductName, SupplierID, CategoryID, Unit, Price)
+VALUES (2,'Chang',1,1,'24 12 oz bottles',19);
+
+INSERT INTO Products(ProductID, ProductName, SupplierID, CategoryID, Unit, Price)
+VALUES (3,'Aniseed Syrup',1,2,'12 - 550 ml bottles',10);
+
+INSERT INTO Products(ProductID, ProductName, SupplierID, CategoryID, Unit, Price)
+VALUES (4,'Chef Anton`s Cajun Seasoning',2,2,'48 - 6 oz jars',22);
+
+INSERT INTO Products(ProductID, ProductName, SupplierID, CategoryID, Unit, Price)
+VALUES (5,'Chef Anton`s Gumbo Mix',2,2,'36 boxes',21.35);
+---------------------------------------------------------------------------------------------------
+CREATE TABLE Suppliers(
+	SupplierID int NOT NULL,
+	SupplierName varchar(255),
+	ContactName varchar(255),
+	Address varchar(255),
+	City varchar(255),
+	PostalCode varchar(255),
+	Country varchar(255),
+	PRIMARY KEY(SupplierID)
+);
+
+
+INSERT INTO Suppliers (SupplierID, SupplierName, ContactName, Address,City, PostalCode, Country)
+VALUES (1,'Exotic Liquid','Charlotte Cooper','49 Gilbert St.','London','EC1 4SD','UK');
+
+INSERT INTO Suppliers (SupplierID, SupplierName, ContactName, Address,City, PostalCode, Country)
+VALUES (2,'New Orleans Cajun Delights','Shelley Burke','P.O. Box 78934','New Orleans','70117','USA');
+
+INSERT INTO Suppliers (SupplierID, SupplierName, ContactName, Address, City, PostalCode, Country)
+VALUES (3,'Grandma Kelly`s Homestead','Regina Murphy','07 Oxford Rd.','Ann Arbor','48104','USA');
+
+-- ------------------------------------------------------------------------------
+SELECT * FROM Products;
+SELECT MIN(PRICE) AS SmallestPrice FROM Products; 
+SELECT * FROM Products order by PRICE LIMIT 3;
+
+SELECT * FROM Customers WHERE substring_index(CustomerName, " ", 1) LIKE 'a___%';
+SELECT * FROM Customers WHERE substring_index(CustomerName, " ", -1) LIKE 'F___%';
+
+ 
+SELECT * FROM Customers WHERE CustomerName LIKE 'a%';
+SELECT * FROM Customers WHERE CustomerName LIKE '%or%';
+
+-- selects all customers with a CustomerName that starts with "a" and are at least 3 characters in length:
+SELECT * FROM customers WHERE CustomerName LIKE 'a__%';
+
+SELECT * FROM Customers WHERE CustomerName LIKE 'a%o';
+
+SELECT * FROM Customers WHERE City RLIKE '^[bmf]';
+-- city begins with b,m, or f and then anything inbetween and ends with n or t
+SELECT * FROM Customers WHERE City RLIKE '^[bmf].*[nt]$';
+
+-- IN 
+SELECT * FROM Customers WHERE Country IN ('Germany','France','UK');
+SELECT * FROM Products WHERE Price BETWEEN 10 and 20 ORDER BY Price;
+
+SELECT City FROM Customers UNION SELECT City FROM Suppliers ORDER BY City;
+
+-- UNION ALL permits duplicates
+SELECT City FROM Customers UNION ALL SELECT City FROM Suppliers ORDER BY City;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
