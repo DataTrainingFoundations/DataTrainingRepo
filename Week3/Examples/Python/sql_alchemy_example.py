@@ -1,16 +1,17 @@
+"""
+Docstring for sql_alchemy_example
+"""
 # or instead we could use an ORM like sql alchemy
+import os
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy.exc import SQLAlchemyError
-from pymysql import *
-
-
 
 #GOOD way to take user input, NOT vulnerbale to Injection Attack
 
 #better way
 from dotenv import load_dotenv
-import os
+
 
 load_dotenv("my_credentials.env")
 #ADD my_credentials.env to .gitignore, or just add all .env files to .gitignore
@@ -23,7 +24,10 @@ db_name=os.getenv("DB_NAME")
 Base= declarative_base()
 
 #Define ORM model (this replaces the previous CREATE TABLE logic)
+
 class Player(Base):
+    """Docstring for class Player"""
+
     __tablename__ = "players"
     playerID = Column(Integer,primary_key=True)
     firstname = Column(String(255),nullable=False)
@@ -34,14 +38,12 @@ class Player(Base):
 try:
     engine = create_engine(f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}",
                            echo=False) # set True for generated SQL
-    
     #drop players first
     Base.metadata.drop_all(
     engine,
     tables=[Player.__table__],
     checkfirst=True
     )
-    
     #create tables if they don't exist
     Base.metadata.create_all(engine)
 
@@ -75,16 +77,12 @@ try:
 
         session.add(new_player)
         session.commit()
-    
-    
     players = session.query(Player).all()
-
     for player in players:
         print(player.playerID, player.firstname, player.lastname, player.sport)
 
     session.close()
     engine.dispose()
-       
 except SQLAlchemyError as e:
     print("Database error:", e)
 
