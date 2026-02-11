@@ -6,8 +6,20 @@
 -- SETUP:
 -- Create a database server (docker) (Port on your computer):(Port in the container)
 -- $ docker run --name postgres -e POSTGRES_PASSWORD=testpass -p 5432:5432 -d postgres
--- Create a new database called chinookdb
+-- Create a new database called chinookdb with below command
+-- $ docker exec -it postgres psql -U postgres -c "CREATE DATABASE chinookdb;"
 -- $ docker exec -i postgres psql -U postgres -d chinookdb < "C:\Users\Path\To\Chinook\Psql\File.sql"
+-- if above does not work try below if in powershell:
+-- first 2 steps below may not be necessary if first time trying:
+-- $ docker stop postgres
+-- $ docker rm postgres
+-- $ docker run --name postgres `
+--  -e POSTGRES_PASSWORD=testpass `
+--  -p 5432:5432 `
+--  -v C:\Users\Path\To\TRNGDataJan2026\GitHubRepoForDataJan2026\Week3\SomePostgresql\Chinook-Psql:/scripts `
+--  -d postgres
+-- $ docker exec -it postgres psql -U postgres -c "CREATE DATABASE chinookdb;"
+-- $ docker exec -it postgres psql -U postgres -d chinookdb -f "/scripts/chinook_pg.sql"
 -- Connect to the server (Azure Data Studio / Database extension)
 -- Test your connection with a simple query (like a select)
 -- Execute the Chinook database (from the Chinook_pg.sql file to create Chinook resources in your server)
