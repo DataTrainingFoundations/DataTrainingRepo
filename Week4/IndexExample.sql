@@ -26,6 +26,37 @@ CREATE TABLE mydb.employeesi (
 		END,
         FLOOR(RAND() * 100000)
    FROM seq;     
+   
+   
         
-		
+-- USE mydb;
+-- WITH RECURSIVE seq2 AS (
+-- 		SELECT 1 AS n
+--         UNION ALL
+--         SELECT n+1 FROM seq2 WHERE n<100000
+-- 	)
+-- SELECT * FROM seq2;
     
+-- lets run the query without an index
+
+
+-- EXPLAIN ANALYZE
+-- SELECT * FROM mydb.employeesi WHERE department = 'IT';
+
+-- EXPLAIN
+-- SELECT * FROM mydb.employeesi WHERE department = 'IT';
+
+SET PROFILING = 1;
+
+SELECT * FROM mydb.employeesi
+WHERE last_name='LAST99999';
+
+SELECT * FROM mydb.employeesi
+WHERE last_name='LAST99999';
+
+CREATE INDEX idx_lastname ON mydb.employeesi(last_name);
+SELECT * FROM mydb.employeesi
+WHERE last_name='LAST99999';
+
+SHOW PROFILES;
+
