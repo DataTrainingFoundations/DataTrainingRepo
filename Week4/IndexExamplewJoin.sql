@@ -61,5 +61,13 @@ WHERE c.customer_id=12345;
 
 SHOW PROFILES;
 
+-- how to create a view, TODO: make one more interesting that includes a join and use it in a SELECT query
+-- to make the SELECT query more readable
+DROP VIEW IF EXISTS mydb.customer_12345_total_spent;
+CREATE VIEW mydb.customer_12345_total_spent AS 
+SELECT * FROM mydb.customersi;
+
+SELECT * FROM mydb.customer_12345_total_spent;
+
 
 
