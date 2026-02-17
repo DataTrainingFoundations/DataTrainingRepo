@@ -17,7 +17,7 @@ def lambda_handler(event, context):
     output = StringIO()
     writer = csv.writer(output)
 
-    writer.writewrow([
+    writer.writerow([
         "order_id",
         "customer_id",
         "product_id",
