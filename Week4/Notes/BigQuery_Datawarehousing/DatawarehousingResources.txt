@@ -1,0 +1,19 @@
+slowly changing dimensions:
+https://www.sqlshack.com/implementing-slowly-changing-dimensions-scds-in-data-warehouses/
+
+
+star schema:
+https://www.geeksforgeeks.org/star-schema-in-data-warehouse-modeling/#
+
+overview:
+https://www.tutorialspoint.com/dwh/dwh_relational_olap.htm
+
+
+
+
+---------------------------------
+a good book:
+
+Kimball, Ralph, and Margy Ross. "The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling, Ed. Wiley." (2019).
+download here:
+(https://github.com/nerdseeker365/TEXT_BOOKS-AND-MATERIALS/blob/master/The%20Data%20Warehouse%20Toolkit%2C%203rd%20Edition.pdf)

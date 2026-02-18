@@ -1,0 +1,24 @@
+1. BigQuery: Qwik Start - Console (https://www.cloudskillsboost.google/catalog_lab/685)
+
+or almost same lab:
+
+Using BigQuery in the Google Cloud Console (https://www.cloudskillsboost.google/catalog_lab/1451)
+
+2. BigQuery: Qwik Start - Command Line (https://www.cloudskillsboost.google/catalog_lab/684)
+
+3. Weather Data in BigQuery (https://www.cloudskillsboost.google/catalog_lab/476)
+
+4. Exploring Your Ecommerce Dataset with SQL in Google BigQuery
+(https://www.cloudskillsboost.google/catalog_lab/1452)
+
+5. Troubleshooting Common SQL Errors with BigQuery 
+(https://www.cloudskillsboost.google/catalog_lab/1467)
+
+6. Advanced. Getting Started with BigQuery Machine Learning
+(https://www.cloudskillsboost.google/catalog_lab/1153)
+
+7. Advanced. Analyze BigQuery data in Connected Sheets: Challenge Lab
+(https://www.cloudskillsboost.google/catalog_lab/6220)
+
+8. Advanced. Bracketology with Google Machine Learning
+(https://www.cloudskillsboost.google/catalog_lab/1645)

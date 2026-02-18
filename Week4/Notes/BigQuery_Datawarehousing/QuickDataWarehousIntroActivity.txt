@@ -1,0 +1,46 @@
+Star Schema Example:
+
+https://www.geeksforgeeks.org/star-schema-in-data-warehouse-modeling/#
+
+dataset to use:
+https://www.kaggle.com/datasets/ddosad/auto-sales-data
+
+1. Create an ERD in MySQL or Lucid Chart (https://www.lucidchart.com/) which follows a star schema
+2. Create corresponding tables in BigQuery by uploading data and using following resources to get started
+3. Transfer your data from each table into Excel as a csv from BigQuery
+
+
+
+
+
+see for ERD in MySQL https://medium.com/@tushar0618/how-to-create-er-diagram-of-a-database-in-mysql-workbench-209fbf63fd03
+
+start here for BigQuery:
+https://cloud.google.com/bigquery/docs/loading-data
+
+https://cloud.google.com/bigquery/docs/datasets
+
+https://cloud.google.com/bigquery/docs/listing-datasets
+
+https://cloud.google.com/bigquery/docs/updating-datasets
+
+Tables
+
+https://cloud.google.com/bigquery/docs/tables
+
+resource: https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#creating_a_new_table_from_an_existing_table
+
+
+------------------------------------------------------------------------
+https://cloud.google.com/bigquery/docs/bq-command-line-tool
+
+https://cloud.google.com/bigquery/docs/reference/standard-sql/introduction#sql
+
+https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+

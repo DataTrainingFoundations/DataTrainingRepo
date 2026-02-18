@@ -1,0 +1,58 @@
+15 things you didn't know about big query:
+https://medium.com/google-cloud/15-awesome-things-you-probably-didnt-know-about-google-bigquery-6654841fa2dc
+
+
+BigQuery Basics :
+
+https://cloud.google.com/bigquery/public-data
+
+https://cloud.google.com/bigquery/docs/quickstarts/query-public-dataset-console
+
+https://cloud.google.com/bigquery/docs/quickstarts/query-public-dataset-bq
+
+
+https://cloud.google.com/bigquery/docs/bq-command-line-tool
+
+https://cloud.google.com/bigquery/docs/reference/standard-sql/introduction#sql
+
+https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax
+
+
+----------------------------------------------------------------------------------------------
+
+https://cloud.google.com/bigquery/docs/loading-data
+
+https://cloud.google.com/bigquery/docs/quickstarts/query-public-dataset-console#open_a_public_dataset
+
+https://cloud.google.com/bigquery/docs/datasets
+
+https://cloud.google.com/bigquery/docs/listing-datasets
+
+https://cloud.google.com/bigquery/docs/updating-datasets
+
+
+
+---------------------------------------------------------------------------------------------------
+Tables
+
+https://cloud.google.com/bigquery/docs/tables
+
+resource: https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#creating_a_new_table_from_an_existing_table
+
+----------------------------------------------------------------------------------------------------------
+For schemas especially star and snowflake for your data warehouse:
+
+https://cloud.google.com/bigquery/docs/migration/schema-data-overview
+
+https://cloud.google.com/bigquery/docs/nested-repeated#example
+
+
+specify schema:
+https://cloud.google.com/bigquery/docs/schemas
+
+
+------------------------------------------------------------------
+For keys and referential integrity:
+https://cloud.google.com/blog/products/data-analytics/join-optimizations-with-bigquery-primary-and-foreign-keys
+
+https://cloud.google.com/bigquery/docs/information-schema-table-constraints

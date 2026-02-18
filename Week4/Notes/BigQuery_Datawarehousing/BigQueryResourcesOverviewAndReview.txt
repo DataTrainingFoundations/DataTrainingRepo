@@ -1,0 +1,11 @@
+1.  video tutorials at bottom of page:
+https://cloud.google.com/bigquery/docs/introduction 
+
+2. For reference and review all examples for running queries:
+https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax 
+
+3. review all sublanguages and examples:
+https://cloud.google.com/bigquery/docs/introduction-sql
+
+4. Advanced, Big Query ML, including Regressions:
+https://cloud.google.com/bigquery/docs/bqml-introduction
