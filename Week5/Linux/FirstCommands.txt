@@ -1,0 +1,233 @@
+1)To go to root use "cd /" command
+$ cd /
+and then type "pwd" to check / (if your in root)
+
+2)To go to home use cd or cd ~
+$ cd 
+and then type "pwd" to check /home/wterry (if your in HOME)
+
+Important Commands:
+
+remember: use mkdir --help to see usage and arguments, --help works with any command not just mkdir
+also ctrl+l clears console and "exit" exits console
+
+3)mkdir
+
+The mkdir command in Linux/Unix allows users to create or make new directories. mkdir stands for “make directory.”
+
+mkdir dir1
+mkdir {test1,test2,test3}
+mkdir –p Linux/dirtest1/dirtest2
+
+4)rmdir and rm
+
+The command-line utility for deleting empty directories. It is useful when you want to delete a directory only if it is empty, without needing to check whether the directory is empty or not.
+
+rmdir dir1  ->only empty dir
+rm -r dir1   ->dir with contents
+rm -r dir1 dir2 dir3 ->all listed directory will be deleted
+
+try:
+rm -r Linux
+
+this removes all of subdirectories created above
+
+5) cp 
+
+a) Two file names : If the command contains two file names, then it copy the contents of 1st file to the 2nd file. If the 2nd file doesn’t exist, then first it creates one and content is copied to it. But if it existed then it is simply overwritten without any warning. So be careful when you choose destination file name.
+
+cp Src_file Dest_file
+
+6) cd
+
+Change directory
+
+cd -> defaults to value of HOME shell variable
+cd / -> go to root
+cd .. -> '..' is processed by removing the immediately previous pathname component
+
+7) ls 
+
+for listing the data in the folders
+
+ls -> list down
+ls -t -> sort by modification time
+ls -1 -> Display One File Per Line 
+ls -l -> Display All Information About Files/Directories 
+ls -lt -> Order Files Based on Last Modified Time
+ls -ltr-> Order Files Based on Last Modified Time (In Reverse Order)
+
+
+8) cat
+
+Cat(concatenate) command is very frequently used in Linux. It reads data from the file and gives their content as output. It helps us to create, view, concatenate files. So let us see some frequently used cat commands. 
+
+$cat filename -> To view a single file 
+
+$cat file1 file2 -> To view multiple files 
+
+$ cat >newfile -> Will create a file named newfile
+
+
+9)grep
+
+Grep is a Linux / Unix command-line tool used to search for a string of characters in a specified file. The text search pattern is called a regular expression. When it finds a match, it prints the line with the result. The grep command is handy when searching through large log files.
+
+a)$ grep "literal_string" filename.
+
+b)$ grep "this" demo_file
+
+c)$ history | grep dnf
+
+
+10)echo
+
+echo command in linux is used to display line of text/string that are passed as an argument . This is a built in command that is mostly used in shell scripts and batch files to output status text to the screen or a file.
+
+echo -e "Geeks \bfor \bGeeks"
+
+echo -e "Geeks \cfor Geeks"
+
+echo -e "Geeks \nfor \nGeeks"
+
+echo -e "Geeks \tfor \tGeeks"
+
+echo -e "Geeks \rfor Geeks"
+
+echo -e "Geeks \vfor \vGeeks
+
+11)df
+
+The df command (short for disk free), is used to display information related to file systems about total space and available space.
+
+df
+df /home/wterry/
+df -a  ->If you want to display all the file system, use -a option.
+df --total  ->To get complete grand total, use –total option
+du 
+
+
+12)chmod
+In Unix-like operating systems, the chmod command is used to change the access mode of a file.
+The name is an abbreviation of change mode.
+
+The references are used to distinguish the users to whom the permissions apply i.e. they are list of letters that specifies whom to give permissions. The references are represented by one or more of the following letters:
+
+Reference   Class     Description
+u          owner      file's owner
+
+g          group      users who are members of
+                      the file's group
+
+o          others     users who are neither the
+                      file's owner nor members of 
+                      the file's group
+
+a          all       All three of the above, same as ugo
+
+
+The operator is used to specify how the modes of a file should be adjusted. The following operators are accepted:
+
+Operator  Description
++         Adds the specified modes to the
+          specified classes
+
+-         Removes the specified modes from 
+          the specified classes
+
+=         The modes specified are to be made
+          the exact modes for the specified 
+          classes
+
+The modes inUse the ls -l command to find out who owns a file or what group the file belongs to:
+
+indicate which permissions are to be granted or removed from the specified classes. There are three basic modes 
+which correspond to the basic permissions:
+
+r       Permission to read the file.
+w       Permission to write (or delete) the file.
+x       Permission to execute the file, or, in
+        the case of a directory, search it.
+
+ls -l
+
+before 
+drwxrwxr-x  mik   mik   EXAM
+
+ chmod u=rw EXAM 
+
+after
+ drw-rwxr-x   mik  mik    EXAM
+
+13)chown
+The chown command allows you to change the user and/or group ownership of a given file, directory, or symbolic link.in
+
+ls -l filename.txt
+
+
+-rw-r--r-- 12 linuxize users 12.0K Apr  8 20:51 filename.txt
+|[-][-][-]-   [------] [---]
+                |       |
+                |       +-----------> Group
+                +-------------------> Owner
+To change the owner of a file use the chown command followed by the user name of the new owner and the target file as an argument
+
+chown USER FILE
+
+
+14)find
+
+The find command in UNIX is a command line utility for walking a file hierarchy. It can be used to find files and directories and perform subsequent operations on them.
+
+find . -name test1.txt  ->Search a file with specific name.
+find . -maxdepth 1 -name 'test*'     ->Search a file with pattern.
+
+15)history
+history command is used to view the previously executed command. 
+
+history 
+history 5 
+history | grep find
+
+
+16)ps
+Linux provides us a utility called ps for viewing information related with the processes on a system which stands as abbreviation for “Process Status”
+
+ps
+ps -A
+
+PID – the unique process ID
+TTY – terminal type that the user is logged into
+TIME – amount of CPU in minutes and seconds that the process has been running
+CMD – name of the command that launched the process.
+
+17)kill
+
+kill command in Linux (located in /bin/kill), is a built-in command which is used to terminate processes manually.
+
+kill -l
+ps
+kill pid ->To show how to use a PID with the kill command.
+
+18)sed
+SED command in UNIX is stands for stream editor and it can perform lot’s of function on file like, searching, find and replace, insertion or deletion.
+
+cat > geekfile.txt
+
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+
+sed 's/unix/linux/' geekfile.txt -->Replacing or substituting string
+sed 's/unix/linux/2' geekfile.txt -->Replacing the nth occurrence of a pattern in a line
+
+19)nohup
+
+nohup (No Hang Up) is a command in Linux systems that runs the process even after logging out from the shell/terminal. 
+
+nohup --version
+nohup bash geekfile.sh
+nohup bash geekfile.sh > output.txt
+
+
