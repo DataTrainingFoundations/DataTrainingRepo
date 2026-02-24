@@ -1,0 +1,13 @@
+- two prompts used for LLM and RAG notes
+
+1. please give me some notes and examples on LLM and RAG with fundamental of NLP and ML so I can have a better understanding as a student in a course on GenAI
+
+2. Can you take all of the notes and place them into markdown format so that I can copy and paste just one markdown file as one prompt, please give me the md file itself as one file to download
+
+
+-two prompts used for ML notes supervised vs unsupervised
+
+1. Please give me some notes on machine learning, comparing supervised and unsupervised learning with examples and plots, and write it to download as one markdown file
+
+
+2. can you give a more details example with actual data for the unsupervised cs supervised learning with clustering example so I can download those notes in markdown
