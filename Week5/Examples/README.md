@@ -1,5 +1,7 @@
 - initial prompt: Write a DAO with Alchemy in Python and create a sample db with sqlite for students and courses tables including some sample data and include all the CRUD operations. Do this in a few python modules with easy to read code including comments and good architectural design. Also add in fully functional pytest testing.
 
+- second prompt: can you modify the program so when I run main.py I can use command line input to decide which CRUD operation to perform with clear instructions in the terminal
+
 
 # Student Management System - DAO Pattern with SQLAlchemy
 
