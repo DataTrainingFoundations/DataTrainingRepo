@@ -12,7 +12,7 @@ sudo apt install openjdk-17-jdk
 ```
 wget https://dlcdn.apache.org/spark/spark-4.0.2/spark-4.0.2-bin-hadoop3.tgz
 
-tar -xvzf spark-4.0.1-bin-hadoop3.tgz
+tar -xvzf spark-4.0.2-bin-hadoop3.tgz
 ```
 
 ## 2) Move spark directory
@@ -20,7 +20,7 @@ tar -xvzf spark-4.0.1-bin-hadoop3.tgz
 ```
 cd ~
 
-sudo mv spark-4.0.1-bin-hadoop3 /opt/spark
+sudo mv spark-4.0.2-bin-hadoop3 /opt/spark
 ```
 
 ## 3) Setup environment variables
