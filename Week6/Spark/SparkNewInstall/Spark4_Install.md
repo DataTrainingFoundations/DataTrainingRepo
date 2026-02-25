@@ -10,7 +10,7 @@ sudo apt install openjdk-17-jdk
 ## 1) Download and untar Spark binaries
 
 ```
-wget https://dlcdn.apache.org/spark/spark-4.0.1/spark-4.0.1-bin-hadoop3.tgz
+wget https://dlcdn.apache.org/spark/spark-4.0.2/spark-4.0.2-bin-hadoop3.tgz
 
 tar -xvzf spark-4.0.1-bin-hadoop3.tgz
 ```
