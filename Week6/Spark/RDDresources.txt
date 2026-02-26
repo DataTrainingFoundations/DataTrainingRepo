@@ -1,0 +1,13 @@
+#good overview of RDDs
+https://sparkbyexamples.com/pyspark-rdd/
+
+#Good examples and intro in the docs
+https://spark.apache.org/docs/latest/rdd-programming-guide.html
+
+#for list of all transformations and actions on RDDs
+https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.RDD.lookup.html
+
+
+ 
+
+ 
