@@ -20,7 +20,7 @@ This rubric evaluates student projects for the Stream Analytics Platform, emphas
 
 ### Notes:
 
-- **Data Lifecycle Stages:** Ingest → Store → Transform → Validate → Analyze → Serve  
+- **Data Lifecycle Stages:** Ingest → Store → Transform → Validate  
 - **Optional Medallion Architecture:** Bronze → Silver → Gold (relevant to Architecture & Transform sections)  
 - **Weighting:** Architecture (30%), PySpark (25%), Analysis (20%), Testing/Validation (10%), Airflow/Kafka/Minor components/Code/Demo (5% each).  
 - **All weights are multiples of 5; no category <5 points.**  
