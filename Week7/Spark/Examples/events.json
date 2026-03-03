@@ -1,0 +1,5 @@
+{"timestamp":"2024-01-01T10:00:00","event":"login","user_id":101,"device":"mobile"}
+{"timestamp":"2024-01-01T10:05:23","event":"purchase","user_id":102,"device":"web"}
+{"timestamp":"2024-01-01T10:10:45","event":"logout","user_id":101,"device":"mobile"}
+{"timestamp":"2024-01-01T10:15:12","event":"login","user_id":103,"device":"web"}
+{"timestamp":"2024-01-01T10:20:34","event":"purchase","user_id":103,"device":"web"}

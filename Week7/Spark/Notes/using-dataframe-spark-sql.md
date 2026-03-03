@@ -14,7 +14,6 @@ Spark SQL allows you to use familiar SQL syntax on DataFrames. This is powerful 
 - Existing SQL queries can be migrated easily
 - Teams can collaborate across skill levels
 
-This topic completes Thursday's performance-focused material by showing how to leverage SQL alongside the DataFrame API in our Weekly Epic.
 
 ## The Concept
 
