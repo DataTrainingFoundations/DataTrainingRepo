@@ -76,14 +76,6 @@ Action (e.g., count())
 
 ### Running a Spark Job
 
-#### Interactive Mode (Development)
-```bash
-# PySpark shell
-pyspark --master local[*]
-
-# Or with cluster
-pyspark --master yarn
-```
 
 #### Script Submission
 ```bash
