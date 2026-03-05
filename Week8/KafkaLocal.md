@@ -27,6 +27,22 @@ controller.quorum.voters=1@localhost:9093
 bin/kafka-storage.sh format -t $(bin/kafka-storage.sh random-uuid) -c config/server.properties
 ```
 
+- do not forget to create the below directory for logs
 ```bash
 mkdir -p /home/{username}/kafka_2.13-4.0.1/kraft-combined-logs
+```
+
+- start the server
+```bash
+bin/kafka-server-start.sh config/server.properties
+```
+
+-create your first topic
+```bash
+bin/kafka-topics.sh --create --topic quickstart-events --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+```
+
+- list the topics
+```bash
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
