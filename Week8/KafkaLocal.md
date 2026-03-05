@@ -46,3 +46,8 @@ bin/kafka-topics.sh --create --topic quickstart-events --partitions 1 --replicat
 ```bash
 bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
+
+- in another terminal create a consumer to consumer the messages
+```bash
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic quickstart-events --from-beginning
+```
