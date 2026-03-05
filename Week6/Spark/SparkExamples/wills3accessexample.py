@@ -125,3 +125,31 @@ spark.table("users_bucketed3").show()
 # AWS Glue Data Catalog
 
 #Otherwise you have to setup and configure hive, which is no longer in the curriculum
+
+
+#########################
+#also create an iam user and attach this policy: (then use the keys from this iam user that only has these permissions)
+# {
+    # "Version": "2012-10-17",
+    # "Statement": [
+        # {
+            # "Sid": "AllowS3AccessForSpark",
+            # "Effect": "Allow",
+            # "Action": [
+                # "s3:ListBucket",
+                # "s3:GetBucketLocation"
+            # ],
+            # "Resource": "arn:aws:s3:::willmar5"
+        # },
+        # {
+            # "Sid": "AllowObjectsAccessForSpark",
+            # "Effect": "Allow",
+            # "Action": [
+                # "s3:PutObject",
+                # "s3:GetObject",
+                # "s3:DeleteObject"
+            # ],
+            # "Resource": "arn:aws:s3:::willmar5/*"
+        # }
+    # ]
+# }
