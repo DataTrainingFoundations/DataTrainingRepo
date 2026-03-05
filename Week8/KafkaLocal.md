@@ -18,6 +18,11 @@ vim ~/kafka_2.13-4.0.1/config/server.properties
 
 -add
 ```bash
-metadata.log.dir=/home/will/kafka_2.13-4.0.1/kraft-combined-logs
+metadata.log.dir=/home/{username}/kafka_2.13-4.0.1/kraft-combined-logs
 controller.quorum.voters=1@localhost:9093
+```
+
+- while in the kafka directory you changed to above:
+```bash
+bin/kafka-storage.sh format -t $(bin/kafka-storage.sh random-uuid) -c config/server.properties
 ```
