@@ -49,6 +49,7 @@ with DAG(
 # pip install apache-airflow
 # pip show apache-airflow
 
+#mkdir ~/airflow
 
 # export AIRFLOW_HOME=~/airflow
 # export AIRFLOW__CORE__DAGS_FOLDER=$AIRFLOW_HOME/dags
