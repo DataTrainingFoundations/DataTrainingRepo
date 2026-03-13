@@ -1,0 +1,14 @@
+#note: older version of airflow than the demo on WSL Ubuntu
+
+1. podman compose up -d --build
+2. podman ps
+3. access via localhost:8082 and can run command for interactive terminal with
+podman exec -it pipeline-airflow-scheduler bash
+4. airflow dags list
+5. airflow tasks list my_dag_id
+6. airflow tasks list hello_world
+7. airflow dags unpause hello_world
+8. airflow dags list-runs -d hello_world
+
+9. ctrl+d (to exit from interactive bash shell)
+10. podman compose down -v

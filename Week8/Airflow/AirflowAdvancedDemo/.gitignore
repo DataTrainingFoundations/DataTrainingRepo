@@ -1,0 +1,5 @@
+# Ignoring logs and pycache
+
+/dags/__pycache__/
+
+/logs/
