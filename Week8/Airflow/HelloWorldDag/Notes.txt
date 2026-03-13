@@ -12,3 +12,6 @@ podman exec -it pipeline-airflow-scheduler bash
 
 9. ctrl+d (to exit from interactive bash shell)
 10. podman compose down -v
+
+
+#also note, use "docker" instead of "podman" in commands if using docker
