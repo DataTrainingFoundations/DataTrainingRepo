@@ -1,0 +1,32 @@
+#Explode and Flatten Example
+from pyspark.sql.functions import explode, flatten
+
+arrayArrayData=[Row("James",[["Java","Scala","C++"],["Spark","Java"]]),
+    Row("Michael",[["Spark","Java","C++"],["Spark","Java"]]),
+    Row("Robert",[["CSharp","VB"],["Spark","Python"]])]
+
+arrayArraySchema=["name","subjects"]
+
+df = spark.createDataFrame(spark.sparkContext.parallelize(arrayArrayData),arrayArraySchema)
+#or
+#spark.sparkContext.parallelize(arrayArrayData).toDF(arrayArraySchema)
+
+df.show()
+df.printSchema()
+df.show(truncate=False)
+
+df2 = df.select(f"name",explode(f"subjects")).withColumnRenamed("col","subjects")
+
+#or
+#df2 = df.select(df["name"],explode(df["subjects"])).withColumnRenamed("col","subjects")
+   
+df2.printSchema()
+df2.show(truncate=False)
+
+#or if we wanted to flatten
+
+df.select(f"name",flatten(f"subjects").alias("subjects")).show(truncate=False)
+
+#or
+
+df.select(df['name'],flatten(df['subjects']).alias(df['subjects'])).show(truncate=False)
