@@ -106,11 +106,11 @@
   - Connection parameters documented
 
 - **Data Model:**
-  - Star schema relationships (in Power BI)
+  - Star schema relationships 
   - Proper cardinality (1:many for dims to facts)
   - Date table relationship for time intelligence
 
-- **DAX Measures (8-10 measures examples):**
+- **[DAX] Measures (8-10 measures examples):**
 
 | Category | Measures | DAX Pattern |
 |----------|----------|-------------|
@@ -179,10 +179,10 @@ Assets provided in the `assets/` directory:
 > [!IMPORTANT]
 > **Trainees Build From Scratch:**
 >
-> - Airflow DAG for Snowflake loading (Week 4 skills)
-> - Kafka batch consumer (Week 3-4 skills)
-> - All Snowflake SQL: stages, Bronze/Silver/Gold tables, Tasks (Week 5 skills)
-> - Power BI dashboard with DAX measures or StreamLit (Week 6 skills)
+> - Airflow DAG for Snowflake loading (Week 8 skills)
+> - Kafka batch consumer (Week 7-8 skills)
+> - All Snowflake SQL: stages, Bronze/Silver/Gold tables, Tasks (Week 9 skills)
+> - Power BI dashboard with DAX measures or StreamLit (Week 10 skills)
 
 ---
 
@@ -192,12 +192,12 @@ What trainees must build and demonstrate:
 
 | Deliverable | Description |
 |-------------|-------------|
-| Kafka Batch Consumer | Python script consuming from topics to landing zone |
+| Kafka Batch Consumer (optional) | Python script consuming from topics to landing zone |
 | Snowflake SQL Scripts | Stages, Bronze/Silver/Gold tables, stored procedures |
 | Snowflake Task Chain | Automated refresh pipeline |
 | Airflow DAG | Orchestrates Snowflake loading |
 | Snowflake Loader Script | Python script using snowflake-connector-python |
-| Power BI Dashboard | 5 pages with 8-10 DAX measures |
+| Power BI or StreamLit Dashboard | 5 pages with 8-10 [DAX] measures |
 | Demo Presentation | End-to-end walkthrough for managers |
 
 ---
@@ -208,6 +208,7 @@ What trainees must build and demonstrate:
 |------------|----------|
 | **Snowflake Trial** | Reproducible setup scripts, X-SMALL warehouse, 30-day account |
 | **Power BI Desktop (optional)** | DirectQuery mode, Windows required for Desktop |
+| **StreamLit (optional)** | Snowflake Connection|
 | **Data Volume** | 50k+ events via bulk mode |
 | **Credentials** | Environment variables, never committed to repo |
 | **Phase 1 Dependency** | Requires Phase 1 stack running for CSV output |
