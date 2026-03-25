@@ -43,7 +43,7 @@
 │  └────────────────────────────────────────────────────────────────────────────┘ │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
-
+Note: (optional) You may re-tool Phase I with Snowflake too.
 ---
 
 ## 3. Functional Modules
@@ -55,7 +55,7 @@
 **Key Deliverables:**
 
 - **Airflow DAG Extension** (`dag_streamflow_warehouse.py`):
-  - Task to upload CSV files to Snowflake internal stage
+  - Task to upload [CSV] files to Snowflake internal stage
   - Task to execute COPY INTO for Bronze tables
   - Error handling and retry logic
 
@@ -180,7 +180,7 @@ Assets provided in the `assets/` directory:
 > **Trainees Build From Scratch:**
 >
 > - Airflow DAG for Snowflake loading (Week 8 skills)
-> - Kafka batch consumer (Week 7-8 skills)
+> - Kafka batch consumer (optional) (Week 7-8 skills)
 > - All Snowflake SQL: stages, Bronze/Silver/Gold tables, Tasks (Week 9 skills)
 > - Power BI dashboard with DAX measures or StreamLit (Week 10 skills)
 
@@ -211,5 +211,5 @@ What trainees must build and demonstrate:
 | **StreamLit (optional)** | Snowflake Connection|
 | **Data Volume** | 50k+ events via bulk mode |
 | **Credentials** | Environment variables, never committed to repo |
-| **Phase 1 Dependency** | Requires Phase 1 stack running for CSV output |
+| **Phase 1 Dependency** | Requires Phase 1 stack running for output, or can be re-tooled for more Snowflake integration |
 
