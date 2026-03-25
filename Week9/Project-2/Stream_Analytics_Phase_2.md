@@ -1,4 +1,4 @@
-# Project Spec: StreamFlow Phase 2 - Enterprise Analytics Pipeline (Simplified)
+# Project Spec: StreamFlow Phase 2 - Enterprise Analytics Pipeline 
 
 ## 1. Executive Summary
 
