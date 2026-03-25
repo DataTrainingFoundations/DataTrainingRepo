@@ -206,7 +206,7 @@ What trainees must build and demonstrate:
 
 | Constraint | Strategy |
 |------------|----------|
-| **Snowflake Trial** | Reproducible setup scripts, X-SMALL warehouse, 30-day account |
+| **Snowflake Trial** | Reproducible setup scripts, 30-day account |
 | **Power BI Desktop (optional)** | DirectQuery mode, Windows required for Desktop |
 | **StreamLit (optional)** | Snowflake Connection|
 | **Data Volume** | 50k+ events via bulk mode |
