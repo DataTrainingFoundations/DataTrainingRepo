@@ -1,0 +1,3 @@
+{"event_id": 4, "timestamp": "2026-03-11T12:00:00", "event_type": "click", "user_id": 101}
+{"event_id": 5, "timestamp": "2026-03-11T12:01:00", "event_type": "purchase", "user_id": 102}
+{"event_id": 6, "timestamp": "2026-03-11T12:02:00", "event_type": "signup", "user_id": 103}
