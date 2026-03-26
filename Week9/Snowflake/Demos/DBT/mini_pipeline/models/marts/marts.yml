@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: customer_sales
+    description: Aggregated sales per customer
+
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+
+      - name: total_sales
+        tests:
+          - not_null

@@ -1,0 +1,14 @@
+mini_pipeline_profile:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: <account>
+      user: <user>
+      password: <password>
+      role: ACCOUNTADMIN
+      database: MY_DB2
+      warehouse: COMPUTE_WH
+      schema: RAW
+      threads: 4
+      client_session_keep_alive: false
