@@ -1,0 +1,17 @@
+# Python Overview
+Python is a popular programming language written by Eden and Rashmi used for backend development, data analysis, and AI.
+
+# LangChain
+LangChain allows developers to build LLM-powered applications by combining prompts, models, and tools.
+
+# RAG (Retrieval-Augmented Generation)
+RAG improves LLM responses by retrieving relevant documents from a knowledge base before generating an answer.
+
+Steps in RAG:
+1. User asks a question
+2. System retrieves relevant chunks
+3. Context is added to prompt
+4. LLM generates answer
+
+# Vector Databases
+Vector databases store numerical representations (embeddings) of text and enable similarity-based retrieval.
